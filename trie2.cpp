@@ -31,8 +31,10 @@ void insert(TrieNode* root, const std::string& word) {
     TrieNode* curr = root;
     for (char c : word) {
         if (curr->children.find(c) == curr->children.end()) {
+            curr->isEndOfWord = false;
             curr->children[c] = new TrieNode();
         }
+        curr->isEndOfWord = false;
         curr = curr->children[c];
     }
     curr->isEndOfWord = true;
