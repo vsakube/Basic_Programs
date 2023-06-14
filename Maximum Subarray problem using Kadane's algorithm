@@ -2,7 +2,7 @@
 #include <climits>
 #include <vector>
 
-int maxSubarraySum(int arr[], int n) {
+vector<int> maxSubarraySum(int arr[], int n) {
     int maxSum = INT_MIN; // Initialize maxSum as the smallest possible value
     int currentSum = 0;
     int start = 0;
